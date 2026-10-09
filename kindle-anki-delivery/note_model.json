@@ -1,0 +1,13 @@
+{
+  "modelName": "英语词汇-词根词源",
+  "inOrderFields": ["单词", "音标", "释义", "例句", "词根词缀", "词源"],
+  "css": ".card { font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; font-size: 20px; text-align: center; color: #222; background-color: #fafafa; }\n.word { font-size: 40px; font-weight: bold; margin: 20px 0 4px; }\n.phonetic { font-size: 20px; color: #888; margin-bottom: 16px; }\n.hr { border-top: 1px solid #ddd; margin: 16px 0; }\n.sec { text-align: left; margin: 12px 0; line-height: 1.7; }\n.sec .label { font-weight: bold; color: #0a6b5c; margin-right: 6px; }\n.def { font-size: 22px; text-align: left; line-height: 1.6; margin: 8px 0; }\n.example { color: #444; font-style: italic; }",
+  "isCloze": false,
+  "cardTemplates": [
+    {
+      "Name": "单词卡",
+      "Front": "<div class=\"word\">{{单词}}</div>\n{{#音标}}<div class=\"phonetic\">{{音标}}</div>{{/音标}}",
+      "Back": "{{FrontSide}}\n<hr id=answer>\n{{#词根词缀}}<div class=\"sec\"><span class=\"label\">词根词缀</span>{{词根词缀}}</div>{{/词根词缀}}\n{{#词源}}<div class=\"sec\"><span class=\"label\">词源</span>{{词源}}</div>{{/词源}}\n<div class=\"def\">{{释义}}</div>\n{{#例句}}<div class=\"sec example\">{{例句}}</div>{{/例句}}"
+    }
+  ]
+}

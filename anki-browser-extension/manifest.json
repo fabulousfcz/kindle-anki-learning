@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "生词一键进 Anki",
+  "version": "1.0.0",
+  "description": "选中英文单词，一键添加到电脑 Anki 的「英语生词本」牌组（英语词汇-词根词源 笔记类型），词根词源由监听器自动补全。",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_title": "生词一键进 Anki",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

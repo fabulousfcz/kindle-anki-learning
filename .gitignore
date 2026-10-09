@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 个人/临时文件
+_anki_path.txt
+.workbuddy/
+
+# 敏感信息（API Key 等，绝不提交）
+api_key.txt
+*.env
+.env
+
+# 重复的旧副本（保留顶层 anki.koplugin/ 即可）
+kindle-anki-delivery/anki.koplugin/
+kindle-anki-delivery/anki.koplugin1/
+
+# 系统文件
+.DS_Store
+Thumbs.db

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>墨墨风格 Anki 卡片预览（精调版）</title>
+<style>
+  body { background:#e8eaea; font-family:-apple-system,'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif; margin:0; padding:20px 0; }
+  .phone { width:390px; margin:0 auto 30px; background:#fff; border-radius:24px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,.15); }
+  .phone-label { text-align:center; color:#666; font-size:14px; margin:18px 0 10px; }
+
+  .card { font-size:17px; color:#333333; background:#ffffff; text-align:center; line-height:1.6; margin:0; padding:0; }
+  .momo-header { background:linear-gradient(165deg,#79cfc6 0%,#5bbeb3 55%,#4aab9f 100%); padding:30px 18px 26px; margin:0; }
+  .word { font-size:44px; font-weight:600; color:#1c3f54; letter-spacing:.4px; margin:0 0 12px; }
+  .phonetic-line { display:flex; align-items:center; justify-content:center; gap:9px; flex-wrap:wrap; }
+  .us-tag { background:#ffffff; color:#43a498; font-size:13px; font-weight:600; line-height:1; padding:4px 10px; border-radius:11px; }
+  .phonetic { font-size:21px; color:#f0fbfa; letter-spacing:.3px; }
+  .speaker { display:inline-block; width:21px; height:21px; }
+  .recall-hint { margin-top:100px; font-size:21px; color:#a4adb2; }
+  .tap-hint { margin-top:14px; font-size:14px; color:#c0c7cb; letter-spacing:1px; padding-bottom:120px; }
+  .momo-body { text-align:left; padding:4px 20px 28px; }
+  .def-block { font-size:22px; color:#2a2a2a; font-weight:500; padding:18px 0 14px; line-height:1.55; white-space:pre-line; }
+  .sec { border-top:1px solid #f2f2f2; padding:14px 0 8px; }
+  .sec-label { font-size:14px; color:#a6aeb3; margin-bottom:12px; }
+  .tag { display:inline-block; background:#54b8ad; color:#fff; font-size:13px; padding:3px 12px; border-radius:5px; margin:0 0 12px; }
+  .roots { font-size:17px; color:#333; line-height:1.9; white-space:pre-line; }
+  .etym { font-size:16px; color:#555; line-height:1.8; white-space:pre-line; }
+  .examples { font-size:17px; color:#333; line-height:1.9; white-space:pre-line; }
+  .examples .hl { color:#e5514b; font-weight:600; }
+
+  /* 底部按钮示意（AnkiDroid 实际按钮由应用控制，这里为视觉效果参考） */
+  .answer-bar { display:flex; gap:8px; padding:12px 14px 18px; border-top:1px solid #f2f2f2; background:#fff; }
+  .btn { flex:1; border-radius:10px; color:#fff; text-align:center; padding:12px 0; font-size:16px; font-weight:600; }
+  .btn small { display:block; font-size:11px; font-weight:400; opacity:.9; margin-top:2px; }
+  .b1 { background:#54b878; }
+  .b2 { background:#f5a623; }
+  .b3 { background:#e5544b; }
+</style>
+</head>
+<body>
+
+<div class="phone-label">① 卡片正面（自动发音）</div>
+<div class="phone">
+  <div class="card">
+    <div class="momo-header">
+      <div class="word">fraction</div>
+      <div class="phonetic-line"><span class="us-tag">美</span><span class="phonetic">['frækʃ(ə)n]</span>
+        <svg class="speaker" viewBox="0 0 24 24" fill="#f0fbfa"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+      </div>
+    </div>
+    <div class="recall-hint">请回忆单词发音和释义</div>
+    <div class="tap-hint">点击屏幕显示答案</div>
+  </div>
+</div>
+
+<div class="phone-label">② 卡片背面</div>
+<div class="phone">
+  <div class="card">
+    <div class="momo-header">
+      <div class="word">fraction</div>
+      <div class="phonetic-line"><span class="us-tag">美</span><span class="phonetic">['frækʃ(ə)n]</span>
+        <svg class="speaker" viewBox="0 0 24 24" fill="#f0fbfa"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+      </div>
+    </div>
+    <div class="momo-body">
+      <div class="def-block">[名] 分数；小部分；碎片；一点儿</div>
+      <div class="sec">
+        <div class="sec-label">例句</div>
+        <div class="examples">Each piece is a <span class="hl">fraction</span> of the whole.
+每一块都是整体的一部分。
+He raised his voice a <span class="hl">fraction</span>.
+他提高了一点声音。</div>
+      </div>
+      <div class="sec">
+        <div class="sec-label">助记</div>
+        <span class="tag">联想</span>
+        <div class="roots">frac（碎裂）+ tion（名词后缀）→ 碎成小部分 → 小部分，部分</div>
+      </div>
+      <div class="sec">
+        <div class="sec-label">词源</div>
+        <div class="etym">来自拉丁语 fractio（打破），由 frangere（打碎）派生，14世纪进入英语，最初表示"破碎"，后演变为"分数"之义。</div>
+      </div>
+    </div>
+    <div class="answer-bar">
+      <div class="btn b1">认识<small>44天后</small></div>
+      <div class="btn b2">模糊<small>今日/6天后</small></div>
+      <div class="btn b3">忘记<small>今日/4天后</small></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

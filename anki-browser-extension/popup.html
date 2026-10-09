@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: #333;
+      background: #fff;
+    }
+    h1 {
+      font-size: 16px;
+      margin: 0 0 4px;
+    }
+    .sub {
+      font-size: 12px;
+      color: #888;
+      margin: 0 0 16px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      margin: 12px 0 4px;
+      color: #555;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background: #0a6b5c;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #085b4e; }
+    #status {
+      margin-top: 12px;
+      font-size: 12px;
+      min-height: 16px;
+      text-align: center;
+    }
+    .ok { color: #2e8b57; }
+    .err { color: #c0392b; }
+  </style>
+</head>
+<body>
+  <h1>生词一键进 Anki</h1>
+  <p class="sub">选中英文单词后点「+Anki」，或右键「把这个词加进 Anki」</p>
+
+  <label>牌组名（Deck）</label>
+  <input id="deckName" />
+
+  <label>笔记类型名（Note Type）</label>
+  <input id="modelName" />
+
+  <label>单词字段名（Word Field）</label>
+  <input id="wordField" />
+
+  <button id="save">保存设置</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
